@@ -70,3 +70,7 @@ default['docker_registry']['storage']['swift'] = {
     container: 'my_docker',
     rootdirectory: '/registry'
 }
+
+# restart policy for the docker container running the registry.
+# Allowed values are: %w(no on-failure always), defaults to 'always'
+default['docker_registry']['restart_policy'] = "always"

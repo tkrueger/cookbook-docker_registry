@@ -50,5 +50,6 @@ docker_container node['docker_registry']['name'] do
   port "#{node['docker_registry']['ip']}:#{node['docker_registry']['port']}:5000"
   env envs
   binds vols
+  restart_policy node['docker_registry']['restart_policy']
   action :run
 end
